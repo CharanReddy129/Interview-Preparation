@@ -335,14 +335,14 @@ Change: 2026-07-27 09:45:00
 ### Hard Links — Multiple names, SAME inode
 
 A hard link creates another directory entry that points to the **exact same inode** as the original file. There is no "original" vs "copy" distinction after creation — they are equally valid names for the same underlying data.
- 
+
 ```bash
 ln original.txt hardlink.txt
 ls -li original.txt hardlink.txt
 # Both show the SAME inode number, confirming they're the same file
 ```
 
-### Key characteristics:
+### Key characteristics
 
 - Both names share the same inode, same permissions, same data, same size — because it is the same file, just referenced by two names.
 - The `Links` count in `stat` output tracks how many hard links point to that inode. A brand-new regular file starts at `Links: 1`.
@@ -369,7 +369,7 @@ ls -l softlink.txt
 # lrwxrwxrwx 1 arjun arjun 12 Jul 27 10:00 softlink.txt -> original.txt
 ```
 
-### Key characteristics
+### Key Characteristics
 
 - Has its OWN inode, separate from the target file's inode.
 - Its "content" is literally just the path string to the target.
