@@ -1,4 +1,4 @@
-# Kubernetes Notes — Part 7
+# Kubernetes Notes - Part 5
 ## Troubleshooting & Real-World Scenarios | Kubernetes on AWS / EKS-Specific | Advanced/Extensibility
 
 ---
